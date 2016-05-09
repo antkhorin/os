@@ -6,6 +6,6 @@ recurse() {
 	elif [ -h "$file" -a ! -e "$file" -a `stat --format=%Y $file` -le $(( `date +%s` - 604800 )) ] 
             then echo "$file"
 	fi
-	done
+    done
 }
 recurse $1
